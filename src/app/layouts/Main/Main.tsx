@@ -33,31 +33,22 @@ const Main = ({ children }: Props): JSX.Element => {
 
   return (
     <Box>
-      <Box position={"relative"} zIndex={theme.zIndex.appBar}>
-        <Container paddingTop={"8px !important"} paddingBottom={"0 !important"}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <Box flexGrow={1} />
-          </Box>
-        </Container>
+      <Box position={"sticky"} zIndex={theme.zIndex.appBar}>
+        <AppBar
+          sx={{
+            backgroundColor: theme.palette.background.paper,
+          }}
+          elevation={0}
+        >
+          <Container paddingY={2}>
+            <Topbar
+              handleMobileMenuClick={handleMobileMenuClick}
+              pages={pages}
+            />
+          </Container>
+        </AppBar>
       </Box>
-      <AppBar
-        position={"static"}
-        sx={{
-          top: 0,
-          backgroundColor: theme.palette.background.paper,
-        }}
-        elevation={0}
-      >
-        <Container paddingY={1}>
-          <Topbar handleMobileMenuClick={handleMobileMenuClick} pages={pages} />
-        </Container>
-      </AppBar>
+
       <Collapse in={open} timeout="auto" unmountOnExit>
         <Container paddingY={0}>
           <MobileMenu pages={pages} />
