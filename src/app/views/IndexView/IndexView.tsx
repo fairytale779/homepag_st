@@ -15,13 +15,14 @@ import {
   Partners,
 } from "./components";
 import Container from "@/app/components/Container";
+import AgencyPage from "@/app/home/page";
 
 const IndexView = (): JSX.Element => {
   return (
     <Main>
       <Box bgcolor={"alternate.main"}>
         <Container>
-          <PromoGrid />
+          <AgencyPage />
         </Container>
       </Box>
       <Container>

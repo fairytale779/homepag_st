@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Popover from '@mui/material/Popover';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import React, { useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import Popover from "@mui/material/Popover";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface Props {
   title: string;
@@ -23,7 +23,7 @@ const NavItem = ({ title, id, items }: Props): JSX.Element => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
-  const handleClick = (event, popoverId) => {
+  const handleClick = (event: any, popoverId: any) => {
     setAnchorEl(event.target);
     setOpenedPopoverId(popoverId);
   };
@@ -36,17 +36,18 @@ const NavItem = ({ title, id, items }: Props): JSX.Element => {
   return (
     <Box>
       <Box
-        display={'flex'}
-        alignItems={'center'}
+        display={"flex"}
+        alignItems={"center"}
         aria-describedby={id}
-        sx={{ cursor: 'pointer' }}
-        onClick={(e) => handleClick(e, id)}
+        sx={{ cursor: "pointer" }}
+        onClick={e => handleClick(e, id)}
+        paddingX={"30px"}
       >
         <Typography
-          color={'text.primary'}
+          color={"text.primary"}
           sx={{
-            '&:hover': {
-              color: 'primary.main',
+            "&:hover": {
+              color: "primary.main",
             },
           }}
         >
@@ -57,8 +58,8 @@ const NavItem = ({ title, id, items }: Props): JSX.Element => {
             marginLeft: theme.spacing(1 / 4),
             width: 16,
             height: 16,
-            transform: openedPopoverId === id ? 'rotate(180deg)' : 'none',
-            color: 'text.primary',
+            transform: openedPopoverId === id ? "rotate(180deg)" : "none",
+            color: "text.primary",
           }}
         />
       </Box>
@@ -69,17 +70,17 @@ const NavItem = ({ title, id, items }: Props): JSX.Element => {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+          vertical: "bottom",
+          horizontal: "center",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: "top",
+          horizontal: "center",
         }}
         sx={{
-          '.MuiPaper-root': {
+          ".MuiPaper-root": {
             maxWidth: 220,
-            padding: 1,
+            padding: 4,
             marginTop: 2,
             borderTopRightRadius: 0,
             borderTopLeftRadius: 0,
@@ -94,14 +95,14 @@ const NavItem = ({ title, id, items }: Props): JSX.Element => {
             <Grid item key={i} xs={items.length > 12 ? 6 : 12}>
               <Link
                 href={p.href}
-                underline={'none'}
-                color={'text.primary'}
+                underline={"none"}
+                color={"text.primary"}
                 sx={{
-                  display: 'flex',
+                  display: "flex",
                   p: 1,
                   borderRadius: 1,
-                  '&:hover': {
-                    bgcolor: 'alternate.main',
+                  "&:hover": {
+                    bgcolor: "alternate.main",
                   },
                 }}
               >

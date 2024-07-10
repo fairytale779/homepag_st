@@ -1,12 +1,12 @@
-import React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 interface Props {
   title: string;
@@ -23,7 +23,7 @@ const NavItem = ({ title, items }: Props): JSX.Element => {
       <Accordion
         disableGutters
         elevation={0}
-        sx={{ backgroundColor: 'transparent', p: 0 }}
+        sx={{ backgroundColor: "transparent", p: 0 }}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -32,14 +32,14 @@ const NavItem = ({ title, items }: Props): JSX.Element => {
           sx={{
             padding: 0,
             minHeight: 0,
-            '& .MuiAccordionSummary-content': { m: 0 },
+            "& .MuiAccordionSummary-content": { m: 0 },
           }}
         >
           <Typography
-            color={'text.primary'}
+            color={"text.primary"}
             sx={{
-              '&:hover': {
-                color: 'primary.main',
+              "&:hover": {
+                color: "primary.main",
               },
             }}
           >
@@ -50,8 +50,8 @@ const NavItem = ({ title, items }: Props): JSX.Element => {
           sx={{
             p: 1,
             pl: 2,
-            borderLeft: '1px solid',
-            borderColor: 'divider',
+            borderLeft: "1px solid",
+            borderColor: "divider",
           }}
         >
           <Stack spacing={1.5}>
@@ -59,11 +59,11 @@ const NavItem = ({ title, items }: Props): JSX.Element => {
               <Link
                 key={i}
                 href={p.href}
-                underline={'none'}
-                color={'text.primary'}
+                underline={"none"}
+                color={"text.primary"}
                 sx={{
-                  '&:hover': {
-                    color: 'primary.main',
+                  "&:hover": {
+                    color: "primary.main",
                   },
                 }}
               >
