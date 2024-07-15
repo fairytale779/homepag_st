@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Provider from "./provider";
+import { light } from "./theme/palette";
 
 const inter = Inter({ subsets: ["latin"] });
 const lato = Lato({ subsets: ["latin"], weight: ["400"], variable: "--lato" });
@@ -23,8 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pretendard.variable}`}>
-      <body className={pretendard.className}>{children}</body>
+    <html lang="en" className={`${pretendard.variable} ${lato.variable}`}>
+      <Provider>
+        <body className={pretendard.className}>{children}</body>
+      </Provider>
     </html>
   );
 }

@@ -2,7 +2,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Collapse from "@mui/material/Collapse";
 import Divider from "@mui/material/Divider";
-import { useTheme } from "@mui/material/styles";
+import { alpha, useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useState } from "react";
 
@@ -37,6 +37,7 @@ const Main = ({ children }: Props): JSX.Element => {
         <AppBar
           sx={{
             backgroundColor: theme.palette.background.paper,
+            borderBottom: `1px solid ${alpha(theme.palette.divider, 0.1)}`,
           }}
           elevation={0}
         >
