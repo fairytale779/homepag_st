@@ -1,8 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
 const TitleName = styled.h2`
@@ -13,89 +10,99 @@ const TitleName = styled.h2`
   font-family: var(--lato);
   text-shadow: 2px 2px 2px gray;
   color: white;
+
+  span {
+    color: #1a335f;
+  }
 `;
 
-const TextMd = styled.h5`
+const Text = styled.h5`
   text-align: center;
+  color: white;
+  font-family: var(--lato);
+  font-weight: 400;
   margin-bottom: 5px;
-  font-family: var(--lato);
-  font-size: 20px;
-  font-weight: 400;
+
+  &.kor {
+    font-size: 24px;
+  }
+
+  &.eng {
+    font-size: 16px;
+  }
 `;
 
-const TextKor = styled.h5`
-  text-align: center;
-  color: white;
-  font-size: 24px;
-  font-weight: 400;
-`;
-
-const TextEng = styled.h5`
-  text-align: center;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: var(--lato);
-`;
+const Section = ({ title, textKor, textEng }: any) => {
+  const firstChar = title.charAt(0);
+  const restOfTitle = title.slice(1);
+  return (
+    <Box>
+      <TitleName>
+        <span>{firstChar}</span>
+        {restOfTitle}
+      </TitleName>
+      <Text className="kor">{textKor}</Text>
+      <Text className="eng">{textEng}</Text>
+    </Box>
+  );
+};
 
 export function Technology() {
   return (
-    <Box>
-      <TitleName>Technology</TitleName>
-      <TextKor>우리만의 혁신적인 기술로,</TextKor>
-      <TextEng>With our innovative technology,</TextEng>
-    </Box>
+    <Section
+      title="Technology"
+      textKor="우리만의 혁신적인 기술로,"
+      textEng="With our innovative technology,"
+    />
   );
 }
 
-export function Tireless(): JSX.Element {
+export function Tireless() {
   return (
-    <Box>
-      <TitleName>Tireless</TitleName>
-      <TextKor>끊임없이 노력하며,</TextKor>
-      <TextEng>We strive tirelessly,</TextEng>
-    </Box>
+    <Section
+      title="Tireless"
+      textKor="끊임없이 노력하며,"
+      textEng="We strive tirelessly,"
+    />
   );
 }
 
-export function Thrive(): JSX.Element {
+export function Thrive() {
   return (
-    <Box>
-      <TitleName>Thrive</TitleName>
-      <TextKor>항상 성장과 발전을 추구하고,</TextKor>
-      <TextEng>to always pursue growth and advancement,</TextEng>
-    </Box>
+    <Section
+      title="Thrive"
+      textKor="항상 성장과 발전을 추구하고,"
+      textEng="to always pursue growth and advancement,"
+    />
   );
 }
 
-export function Together(): JSX.Element {
+export function Together() {
   return (
-    <Box>
-      <TitleName>Together</TitleName>
-      <TextKor>협력하여 더 큰 성과를 이루며,</TextKor>
-      <TextEng>
-        we actively seek collaboration to achieve greater success,
-      </TextEng>
-    </Box>
+    <Section
+      title="Together"
+      textKor="협력하여 더 큰 성과를 이루며,"
+      textEng="we actively seek collaboration to achieve greater success,"
+    />
   );
 }
 
-export function Think(): JSX.Element {
+export function Think() {
   return (
-    <Box>
-      <TitleName>Think</TitleName>
-      <TextKor>고객의 입장에서 생각하고,</TextKor>
-      <TextEng>think from the customer's perspective,</TextEng>
-    </Box>
+    <Section
+      title="Think"
+      textKor="고객의 입장에서 생각하고,"
+      textEng="think from the customer's perspective,"
+    />
   );
 }
 
-export function Trust(): JSX.Element {
+export function Trust() {
   return (
-    <Box>
-      <TitleName>Trust</TitleName>
-      <TextKor>신뢰할 수 있는 기업이 되겠습니다.</TextKor>
-      <TextEng> we promise to become your trusted companion.</TextEng>
-    </Box>
+    <Section
+      title="Trust"
+      textKor="신뢰할 수 있는 기업이 되겠습니다."
+      textEng="we promise to become your trusted companion."
+    />
   );
 }
