@@ -1,23 +1,10 @@
-import React, { useEffect } from "react";
-import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import NoSsr from "@mui/material/NoSsr";
-import Image from "next/image";
+import { useTheme } from "@mui/material/styles";
+import { useEffect } from "react";
 
-import {
-  Welcome,
-  Goby,
-  Process,
-  Nike2,
-  Larq,
-  Nike,
-  Trek,
-  Curology,
-  Reviews,
-  Contact,
-} from "./components";
 import Container from "@/app/components/Container";
-import { Main } from "next/document";
+import { Contact, Process, Reviews, Welcome } from "./components";
 import {
   Technology,
   Think,

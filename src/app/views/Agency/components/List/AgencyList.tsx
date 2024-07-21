@@ -2,36 +2,6 @@ import React from "react";
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
-const TitleName = styled.h2`
-  font-size: 95px;
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 40px;
-  font-family: var(--lato);
-  text-shadow: 2px 2px 2px gray;
-  color: white;
-
-  span {
-    color: #1a335f;
-  }
-`;
-
-const Text = styled.h5`
-  text-align: center;
-  color: white;
-  font-family: var(--lato);
-  font-weight: 400;
-  margin-bottom: 5px;
-
-  &.kor {
-    font-size: 24px;
-  }
-
-  &.eng {
-    font-size: 16px;
-  }
-`;
-
 const Section = ({ title, textKor, textEng }: any) => {
   const firstChar = title.charAt(0);
   const restOfTitle = title.slice(1);
@@ -106,3 +76,34 @@ export function Trust() {
     />
   );
 }
+
+//CS
+const TitleName = styled.h2`
+  font-size: 95px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 40px;
+  font-family: var(--lato);
+  // text-shadow: 2px 2px 2px gray;
+  color: white;
+
+  span {
+    color: #1a335f;
+  }
+`;
+
+const Text = styled.h5`
+  text-align: center;
+  color: white;
+  font-family: var(--lato);
+  font-weight: 400;
+  margin-bottom: 5px;
+
+  &.kor {
+    font-size: 24px;
+  }
+
+  &.eng {
+    font-size: 16px;
+  }
+`;
