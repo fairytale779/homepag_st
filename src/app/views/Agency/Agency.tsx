@@ -27,7 +27,7 @@ const Agency = (): JSX.Element => {
     };
 
     jarallaxInit();
-  });
+  }, []);
 
   const scrollTo = (id: string): void => {
     setTimeout(() => {
@@ -104,7 +104,7 @@ const Agency = (): JSX.Element => {
         alignItems={"center"}
         id="agency__portfolio-item--js-scroll"
       >
-        <Box className={"jarallax-img"} sx={styles("/images/main_01.jpg")} />
+        <Box className={"jarallax-img"} sx={styles("/images/img48.jpg")} />
         <Container>
           <Technology />
         </Container>
@@ -118,7 +118,7 @@ const Agency = (): JSX.Element => {
         display={"flex"}
         alignItems={"center"}
       >
-        <Box className={"jarallax-img"} sx={styles("/images/main_02.jpg")} />
+        <Box className={"jarallax-img"} sx={styles("/images/img44.jpg")} />
         <Container>
           <Tireless />
         </Container>
@@ -143,7 +143,7 @@ const Agency = (): JSX.Element => {
         alignItems={"center"}
         id="agency__portfolio-item--js-scroll"
       >
-        <Box className={"jarallax-img"} sx={styles("/images/main_03.jpg")} />
+        <Box className={"jarallax-img"} sx={styles("/images/img45.jpg")} />
         <Container>
           <Thrive />
         </Container>

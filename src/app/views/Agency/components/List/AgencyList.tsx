@@ -14,10 +14,29 @@ const TitleNm = styled.h2`
   color: #fff;
   text-transform: uppercase;
 
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
   span {
-    color: #1a335f;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #1a335f,
-      0 0 82px #1a335f, 0 0 92px #1a335f, 0 0 102px #1a335f, 0 0 151px #1a335f;
+    background: radial-gradient(
+      circle at 100%,
+      #4a8fff,
+      #377dff 50%,
+      #5a9aff 75%,
+      #377dff 75%
+    );
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear infinite;
   }
 `;
 

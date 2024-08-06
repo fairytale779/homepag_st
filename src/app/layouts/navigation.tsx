@@ -1,56 +1,54 @@
 const pages = [
   {
-    title: 'Home',
-    href: '/demos/ecommerce',
-    id: 'demo__ecommerece-home',
+    title: "About Us",
+    href: "/",
+    id: "home",
+    hoverTitle: "회사소개",
   },
   {
-    title: 'Listing',
-    id: 'demo__ecommerece-listing',
-    children: [
-      {
-        title: 'Search Listing',
-        href: '/demos/ecommerce/listing',
-        id: 'demo__ecommerece-listing--search',
-      },
-      {
-        title: 'Promotions',
-        href: '/demos/ecommerce/promotions',
-        id: 'demo__ecommerece-listing--promotions',
-      },
-    ],
+    title: "Technology",
+    id: "technology",
+    href: "/technology",
+    hoverTitle: "기술소개",
   },
   {
-    title: 'Product Overview',
-    href: '/demos/ecommerce/product-overview',
-    id: 'demo__ecommerece-product-overview',
+    title: "Bussiness",
+    id: "bussiness",
+    href: "/bussiness",
+    hoverTitle: "제품/솔루션",
   },
   {
-    title: 'Pages',
-    id: 'demo__ecommerece-pages',
-    children: [
-      {
-        title: 'Cart',
-        href: '/demos/ecommerce/cart',
-        id: 'demo__ecommerece-pages--cart',
-      },
-      {
-        title: 'Checkout',
-        href: '/demos/ecommerce/checkout',
-        id: 'demo__ecommerece-pages--checkout',
-      },
-      {
-        title: 'Empty Cart',
-        href: '/demos/ecommerce/empty-cart',
-        id: 'demo__ecommerece-pages--empty-cart',
-      },
-      {
-        title: 'Order Complete',
-        href: '/demos/ecommerce/order-complete',
-        id: 'demo__ecommerece-pages--order-complete',
-      },
-    ],
+    title: "Contact",
+    id: "contact",
+    href: "/contact",
+    hoverTitle: "고객지원",
   },
+  // {
+  //   title: "Pages",
+  //   id: "pages",
+  //   children: [
+  //     {
+  //       title: "Cart",
+  //       href: "/demos/ecommerce/cart",
+  //       id: "pages--cart",
+  //     },
+  //     {
+  //       title: "Checkout",
+  //       href: "/demos/ecommerce/checkout",
+  //       id: "pages--checkout",
+  //     },
+  //     {
+  //       title: "Empty Cart",
+  //       href: "/demos/ecommerce/empty-cart",
+  //       id: "demo__ecommerece-pages--empty-cart",
+  //     },
+  //     {
+  //       title: "Order Complete",
+  //       href: "/demos/ecommerce/order-complete",
+  //       id: "demo__ecommerece-pages--order-complete",
+  //     },
+  //   ],
+  // },
 ];
 
 export default pages;

@@ -1,8 +1,8 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import React from "react";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
 
-import { NavItem } from './components';
+import { NavItem } from "./components";
 
 interface NavItemProps {
   title: string;
@@ -21,17 +21,17 @@ interface Props {
 
 const MobileMenu = ({ pages = [] }: Props): JSX.Element => {
   return (
-    <Box>
+    <Box mt={8}>
       {pages.map((p, i) => (
-        <Box key={i} marginY={2}>
+        <Box key={i} margin={2} textAlign="right">
           {!p.children ? (
             <Link
               href={p.href}
-              color={'text.primary'}
-              underline={'none'}
+              color={"text.primary"}
+              underline={"none"}
               sx={{
-                '&:hover': {
-                  color: 'primary.main',
+                "&:hover": {
+                  color: "primary.main",
                 },
               }}
             >

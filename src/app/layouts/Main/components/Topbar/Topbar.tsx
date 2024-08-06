@@ -21,6 +21,7 @@ interface Props {
     id: string;
     href?: string;
     children?: Array<NavItemProps>;
+    hoverTitle?: string;
   }>;
 }
 
@@ -34,12 +35,12 @@ const Topbar = ({ handleMobileMenuClick, pages = [] }: Props): JSX.Element => {
       justifyContent={"space-between"}
       alignItems={"center"}
       width={1}
+      height="20px"
     >
       <Box
         display={"flex"}
         component="a"
         href="/"
-        title="theFront"
         width={{ xs: 100, md: 120 }}
         marginLeft={"30px"}
       >
@@ -56,20 +57,29 @@ const Topbar = ({ handleMobileMenuClick, pages = [] }: Props): JSX.Element => {
         marginRight={"30px"}
       >
         {pages.map((p, i) => (
-          <Box key={i} marginLeft={3}>
+          <Box key={i}>
             {!p.children ? (
               <Link
                 href={p.href}
                 color={"text.primary"}
                 underline={"none"}
+                data-hover-title={p.hoverTitle}
                 sx={{
                   "&:hover": {
                     color: "primary.main",
                   },
+                  "&::before": {
+                    content: `"${p.title}"`,
+                  },
+                  "&:hover::before": {
+                    content: `"${p.hoverTitle}"`,
+                  },
+                  display: "inline-block",
+                  width: "150px",
+                  textAlign: "center",
+                  fontWeight: 500,
                 }}
-              >
-                {p.title}
-              </Link>
+              />
             ) : (
               <NavItem title={p.title} items={p.children} id={p.id} />
             )}
