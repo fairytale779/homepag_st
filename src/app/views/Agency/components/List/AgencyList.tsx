@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
-const TitleName = styled.h2`
+const TitleNm = styled.h2`
   font-size: 95px;
   text-align: center;
   font-weight: 900;
@@ -21,7 +21,7 @@ const TitleName = styled.h2`
   }
 `;
 
-const Text = styled.h5`
+const TextNm = styled.h5`
   text-align: center;
   color: #fff;
 
@@ -43,12 +43,12 @@ const Section = ({ title, textKor, textEng }: any) => {
   const restOfTitle = title.slice(1);
   return (
     <Box>
-      <TitleName>
+      <TitleNm>
         <span>{firstChar}</span>
         {restOfTitle}
-      </TitleName>
-      <Text className="kor">{textKor}</Text>
-      <Text className="eng">{textEng}</Text>
+      </TitleNm>
+      <TextNm className="kor">{textKor}</TextNm>
+      <TextNm className="eng">{textEng}</TextNm>
     </Box>
   );
 };
@@ -112,3 +112,34 @@ export function Trust() {
     />
   );
 }
+
+//CS
+const TitleName = styled.h2`
+  font-size: 95px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 40px;
+  font-family: var(--lato);
+  // text-shadow: 2px 2px 2px gray;
+  color: white;
+
+  span {
+    color: #1a335f;
+  }
+`;
+
+const Text = styled.h5`
+  text-align: center;
+  color: white;
+  font-family: var(--lato);
+  font-weight: 400;
+  margin-bottom: 5px;
+
+  &.kor {
+    font-size: 24px;
+  }
+
+  &.eng {
+    font-size: 16px;
+  }
+`;
