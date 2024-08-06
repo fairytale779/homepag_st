@@ -8,18 +8,23 @@ const TitleName = styled.h2`
   font-weight: 900;
   margin-bottom: 40px;
   font-family: var(--lato);
-  text-shadow: 2px 2px 2px gray;
-  color: white;
+  /* text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #fff; */
+  /* text-shadow: 0 0 60px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 180px #fff,
+    0 0 151px #fff; */
+  color: #fff;
+  text-transform: uppercase;
 
   span {
     color: #1a335f;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #1a335f,
+      0 0 82px #1a335f, 0 0 92px #1a335f, 0 0 102px #1a335f, 0 0 151px #1a335f;
   }
 `;
 
 const Text = styled.h5`
   text-align: center;
-  color: white;
-  font-family: var(--lato);
+  color: #fff;
+
   font-weight: 400;
   margin-bottom: 5px;
 
@@ -29,6 +34,7 @@ const Text = styled.h5`
 
   &.eng {
     font-size: 16px;
+    font-family: var(--lato);
   }
 `;
 
