@@ -2,61 +2,6 @@ import React from "react";
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
-const TitleNm = styled.h2`
-  font-size: 95px;
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 40px;
-  font-family: var(--lato);
-  /* text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #fff; */
-  /* text-shadow: 0 0 60px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 180px #fff,
-    0 0 151px #fff; */
-  color: #fff;
-  text-transform: uppercase;
-
-  @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
-  }
-
-  span {
-    background: radial-gradient(
-      circle at 100%,
-      #4a8fff,
-      #377dff 50%,
-      #5a9aff 75%,
-      #377dff 75%
-    );
-    background-size: 200% auto;
-
-    color: #000;
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: shine 1s linear infinite;
-  }
-`;
-
-const TextNm = styled.h5`
-  text-align: center;
-  color: #fff;
-
-  font-weight: 400;
-  margin-bottom: 5px;
-
-  &.kor {
-    font-size: 24px;
-  }
-
-  &.eng {
-    font-size: 16px;
-    font-family: var(--lato);
-  }
-`;
-
 const Section = ({ title, textKor, textEng }: any) => {
   const firstChar = title.charAt(0);
   const restOfTitle = title.slice(1);
@@ -132,25 +77,48 @@ export function Trust() {
   );
 }
 
-//CS
-const TitleName = styled.h2`
+const TitleNm = styled.h2`
   font-size: 95px;
   text-align: center;
   font-weight: 900;
   margin-bottom: 40px;
   font-family: var(--lato);
-  // text-shadow: 2px 2px 2px gray;
-  color: white;
+  /* text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #fff; */
+  /* text-shadow: 0 0 60px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 180px #fff,
+    0 0 151px #fff; */
+  color: #fff;
+  text-transform: uppercase;
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 
   span {
-    color: #1a335f;
+    background: radial-gradient(
+      circle at 100%,
+      #4a8fff,
+      #377dff 50%,
+      #5a9aff 75%,
+      #377dff 75%
+    );
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear infinite;
   }
 `;
 
-const Text = styled.h5`
+const TextNm = styled.h5`
   text-align: center;
-  color: white;
-  font-family: var(--lato);
+  color: #fff;
+
   font-weight: 400;
   margin-bottom: 5px;
 
@@ -160,5 +128,6 @@ const Text = styled.h5`
 
   &.eng {
     font-size: 16px;
+    font-family: var(--lato);
   }
 `;
